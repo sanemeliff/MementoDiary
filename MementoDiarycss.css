@@ -1,0 +1,245 @@
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    border: none;
+    outline: none;
+    font-family: sans-serif;
+    text-decoration: none;
+    background-color: black;
+    color: whitesmoke;
+    box-sizing: border-box;
+}
+
+html, body{
+    height: 100%;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    padding: 0 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+    .header .logo {
+        font-size: 30px;
+        font-weight: bold;
+        color: ghostwhite;
+        letter-spacing: 1px;
+        font-family: 'Brush Script MT';
+        animation: mover 6s linear infinite;
+    }
+
+.header .menu ul{
+    display: flex;
+}
+
+.header .menu ul li{
+    margin: 0 10px;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+}
+
+.header .menu ul li a {
+    font-size: 18px;
+    color: ghostwhite;
+    transition-delay: 0.1s;
+}
+
+    .header .menu ul li a:hover {
+        background-color: white;
+        color: black;
+        border-left: 1px solid black;
+        border-right: 1px solid black;
+        border-radius: 2px;
+    }
+
+    .header .menu ul li a:active{
+        border: 1px solid white;
+        background-color: black;
+        color: antiquewhite;
+    } 
+
+
+.header .login {
+    display: inline-block;
+    justify-content: normal;
+}
+
+.header .login a {
+    display: flex;
+    height: 35px;
+    line-height: 35px;
+    padding: 0 20px;
+    color: black;
+    background-color: whitesmoke;
+    border: 0.5px solid gray;
+    border-radius: 10px;
+    transition: 0.25s ease;
+}
+
+.header .login a:hover {
+    transform: translateY(-3px);
+    box-shadow: 2px 5px rgb(128, 128, 128);
+}
+
+.header .login a:active {
+    background-color: #c1baba;
+    transform: translateY(1.5px);
+}
+
+.container {
+    height: calc(100% - 60px);
+    display: flex;
+}
+
+.container .sidebar {
+    min-width: 185px;
+    border-right: 1px solid #ddd;
+    overflow: auto;
+    padding: 30px;
+}
+
+.container .sidebar h6{
+    font-size: 16px;
+    color: ghostwhite;
+    letter-spacing: 1px;
+    font-weight: normal;
+    margin-bottom: 10px;
+    padding: 0 15px;
+
+}
+
+.container .sidebar ul{
+    margin-bottom: 50px;
+}
+
+.container .sidebar ul li a {
+    display: block;
+    padding: 6px 15px;
+    color: #999;
+    transition: 0.2s ease;
+}
+
+    .container .sidebar ul li a:hover{
+        background-color: #eee;
+        color: black;
+    }
+
+.container .content {
+    padding: 25px;
+    overflow: auto;
+}
+
+    .container .content img {
+        padding: 0 5px 5px 0;
+        transition: 0.5s ease;
+    }
+
+.container .content .images {
+    padding: 0 150px;
+}
+
+    .container .content img:hover {
+    opacity: 0.4;
+    filter: alpha(opacity=40);
+    -webkit-opacity: 0.4;
+    -moz-opacity: 0.4;
+    }
+
+    form {
+        padding: 50px 100px;
+        border: 3px solid #999;
+        margin: 50px;
+    }
+
+    .loginInfo{
+        margin: 10px;
+    }
+
+    input[type=text], input[type=password] {
+        width: 20%;
+        padding: 8px 10px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+        color: lime;
+    }
+
+    button {
+        color: white;
+        border: 1px solid grey;
+        border-radius: 3px;
+        padding: 5px 10px;
+        transition: 0.25 ease;
+    }
+
+    button[type=submit]{
+        margin-left:
+    }
+
+    button:hover{
+        transform: translateY(-2px);
+        box-shadow: rgb(234, 228, 228) 2px 3px;
+    }
+
+    button:active{
+        transform: translateY(-1px);
+    }
+
+    ::placeholder{
+        background-color: antiquewhite;
+        color: black;
+        border: 2px solid grey;
+        border-radius: 2px;
+        font-weight: bold;
+        font-style: italic;
+    }
+    
+    .password a{
+        color: lime;
+    }
+
+    .password a:hover{
+        font-weight: bolder;
+        letter-spacing: 0.5px;
+        
+    }
+
+    textarea {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        box-sizing: border-box;
+        margin-top: 6px;
+        margin-bottom: 16px;
+        resize: vertical;
+    }
+
+
+
+    @media(max-width: 1367px){
+        .container .sidebar {
+            display: none;
+        }
+    }
+
+@keyframes mover {
+    0% {
+        keyshadow: 0 0 15px rgba(0, 0, 0, 0);
+    }
+
+    50% {
+        keyshadow: 0 0 15px rgba(0, 0, 0, 0.30);
+        transform: translateY(10px);
+    }
+
+    100% {
+        keyshadow: 0 0 15px rgba(0, 0, 0, 0);
+    }
+}
